@@ -2,12 +2,15 @@
 
 Benchmarks for the [k-FP WF attack](http://www.homepages.ucl.ac.uk/~ucabaye/papers/k-fingerprinting.pdf) 
 
-
 The attack works on trace files containing direction of packets and timing of packets. In the feature extraction process there is the ability to fold in packet size features but this is currently not used.
 
-To run first make sure all necessary libraries are installed (via ```requirements.txt```)
+安装必要库：```requirements.txt```
 
-Please make sure that the datasets are available to k-FP before running. Extract [alexa](http://www.homepages.ucl.ac.uk/~ucabaye/alexa.tar.gz), [unmonitored](http://www.homepages.ucl.ac.uk/~ucabaye/unmonitored.tar.gz) and [hidden services](http://www.homepages.ucl.ac.uk/~ucabaye/hs.tar.gz) datasets in to a directory ```../data/```.
+数据集下载地址：
+Hidden Services: https://drive.google.com/open?id=1S5ra--6m1m7ZliyvYsUsTehc6PcJhLjx
+Alexa: https://drive.google.com/open?id=1xTrJhdqezzdUaFYpMhBPNS10i7AY1ahT
+Unmonitored: https://drive.google.com/open?id=1qvjnnQumpGh-Tq7oF-5uC3_sBaS3WDB2
+
 
 Following these steps for k-FP results:
 
