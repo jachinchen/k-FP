@@ -1,0 +1,9 @@
+nohup: ignoring input
+/usr/local/lib/python3.6/dist-packages/sklearn/externals/joblib/externals/cloudpickle/cloudpickle.py:47: DeprecationWarning: the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses
+  import imp
+/usr/local/lib/python3.6/dist-packages/sklearn/model_selection/_split.py:1943: FutureWarning: You should specify a value for 'cv' instead of relying on the default value. The default value will change from 3 to 5 in version 0.22.
+  warnings.warn(CV_WARNING, FutureWarning)
+Monitored type:  alexa
+Training ...
+RF accuracy =  0.9481818181818182
+cross_val_score =  0.93

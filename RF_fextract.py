@@ -10,7 +10,7 @@ import numpy as np
 def neighborhood(iterable):
     iterator = iter(iterable)
     prev = (0)
-    item = iterator.next()  # throws StopIteration if empty.
+    item = iterator.__next__()  # throws StopIteration if empty.
     for next in iterator:
         yield (prev,item,next)
         prev = item
@@ -156,7 +156,7 @@ def first_and_last_30_pkts_stats(trace_data):
 #concentration of outgoing packets in chunks of 20 packets
 def pkt_concentration_stats(trace_data):
     Total = get_pkt_list(trace_data)
-    chunks= [Total[x:x+20] for x in xrange(0, len(Total), 20)]
+    chunks= [Total[x:x+20] for x in range(0, len(Total), 20)]
     concentrations = []
     for item in chunks:
         c = 0

@@ -14,7 +14,7 @@ Following these steps for k-FP results:
 1. Run ```python k-FP.py --dictionary --mon_type alexa``` (for Alexa dataset) or ```python k-FP.py --dictionary --mon_type hs``` (for hidden services dataset) to extract and save features for each traffic instance.
 2. For closed world results, run ```python k-FP.py --RF_closedworld --mon_type alexa``` or ```python k-FP.py --RF_closedworld --mon_type hs```.
 3. For open world results, first build distances that will be used for classification by running ```python k-FP.py --distances --mon_type alexa``` or ```python k-FP.py --distances --mon_type hs```.
-4. For open worl classification, run  ```python k-FP.py --distance_stats --mon_type alexa --knn 6``` or ```python k-FP.py --distance_stats --mon_type hs --knn 6```, where ```--knn``` is the number of neighbours used for final classification.
+4. For open world classification, run  ```python k-FP.py --distance_stats --mon_type alexa --knn 6``` or ```python k-FP.py --distance_stats --mon_type hs --knn 6```, where ```--knn``` is the number of neighbours used for final classification.
 
 
 #### Results
