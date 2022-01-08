@@ -1,5 +1,5 @@
-# -1 is IN, 1 is OUT
-#file format: "direction time size"
+#  -1 is IN, 1 is OUT
+# file format: "direction time size" 方向 时间 大小
 
 import math
 import sys
@@ -12,10 +12,10 @@ def neighborhood(iterable):
     prev = (0)
     item = iterator.__next__()  # throws StopIteration if empty.
     for next in iterator:
-        yield (prev,item,next)
+        yield (prev, item, next)
         prev = item
         item = next
-    yield (prev,item,None)
+    yield (prev, item, None)
 
 def chunkIt(seq, num):
   avg = len(seq) / float(num)
@@ -161,7 +161,7 @@ def pkt_concentration_stats(trace_data):
     for item in chunks:
         c = 0
         for p in item:
-            if p[1] == 1:
+            if p[1] ==1:
                 c+=1
         concentrations.append(c)
     return np.std(concentrations), sum(concentrations)/float(len(concentrations)), np.percentile(concentrations, 50), min(concentrations), max(concentrations), concentrations

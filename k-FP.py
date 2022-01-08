@@ -20,14 +20,14 @@ from itertools import chain
 # from tqdm import *
 
 # re-seed the generator
-# np.random.seed(1234)
+np.random.seed(1234)
 
 # Paths to data ###
 
 rootdir = r"./data/"
 alexa_monitored_data = rootdir + r"Alexa_Monitored/"
 hs_monitored_data = rootdir + r"HS_Monitored/"
-#monitored_data = rootdir + r"Monitored/"
+# monitored_data = rootdir + r"Monitored/"
 unmonitored_data = rootdir + r"Unmonitored/"
 dic_of_feature_data = rootdir + r"Features"
 
@@ -42,10 +42,10 @@ hs_sites = 30
 hs_instances = 100
 hs_train_inst = 60
 
-#assert alexa_instances == hs_instances
-#assert alexa_train_inst == hs_train_inst
-mon_train_inst = alexa_train_inst
-mon_test_inst = alexa_instances - mon_train_inst
+# assert alexa_instances == hs_instances
+# assert alexa_train_inst == hs_train_inst
+mon_train_inst = alexa_train_inst # 0.6
+mon_test_inst = alexa_instances - mon_train_inst # 0.4
 
 num_Trees = 1000
 
@@ -231,12 +231,12 @@ def RF_closedworld(mon_type, path_to_dict=dic_of_feature_data):
     model.fit(tr_data, tr_label)
     print ("RF accuracy = ", model.score(te_data, te_label))
 
-    #print "Feature importance scores:"
-    #print model.feature_importances_
+    # print "Feature importance scores:"
+    # print model.feature_importances_
 
     scores = cross_val_score(model, np.array(tr_data), np.array(tr_label))
     print ("cross_val_score = ", scores.mean())
-    #print "OOB score = ", model.oob_score_(tr_data, tr_label)
+    # print "OOB score = ", model.oob_score_(tr_data, tr_label)
 
 
 def RF_openworld(mon_type, path_to_dict=dic_of_feature_data):

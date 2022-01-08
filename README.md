@@ -19,6 +19,7 @@ Following these steps for k-FP results:
 3. For open world results, first build distances that will be used for classification by running ```python k-FP.py --distances --mon_type alexa``` or ```python k-FP.py --distances --mon_type hs```.
 4. For open world classification, run  ```python k-FP.py --distance_stats --mon_type alexa --knn 6``` or ```python k-FP.py --distance_stats --mon_type hs --knn 6```, where ```--knn``` is the number of neighbours used for final classification.
 
+```nohup python k-FP.py --distances --mon_type hs > xxx.log > 2&1 &```
 
 #### Results
 
